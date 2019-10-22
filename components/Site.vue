@@ -33,11 +33,12 @@ a {
   margin: 16px;
   transition: filter 300ms;
   filter: invert(100%);
-  font-size: 2rem;
+  font-size: 1.3rem;
+  max-width: 300px;
 }
 
 a::first-letter {
-  font-size: 4rem;
+  font-size: 2.6rem;
 }
 
 a:hover {

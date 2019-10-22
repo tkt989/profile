@@ -64,7 +64,14 @@ export default {
 .sites {
   flex-grow: 1;
   display: flex;
+  flex-direction: row;
   align-items: center;
+}
+
+@media only screen and (orientation: portrait) {
+  .sites {
+    flex-direction: column;
+  }
 }
 
 footer {
