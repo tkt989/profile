@@ -52,5 +52,7 @@ export default {
      */
     extend(config, ctx) {}
   },
-  buildDir: 'docs'
+  generate: {
+    dir: 'docs'
+  }
 }
