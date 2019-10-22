@@ -1,17 +1,27 @@
 <template>
-  <a :href="url">{{title}}</a>
+  <div>
+    <a
+      v-if="url"
+      :href="url"
+    >{{title.toUpperCase()}}</a>
+    <nuxt-link
+      v-if="to"
+      :to="to"
+    >{{title.toUpperCase()}}</nuxt-link>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
     title: String,
-    url: String
+    url: String,
+    to: String
   }
 }
 </script>
 
-<style>
+<style scoped>
 a {
   display: inline-block;
   font-family: "Source Code Pro", monospace;
@@ -21,8 +31,13 @@ a {
   color: black;
   padding: 16px;
   margin: 16px;
-  transition: filter 500ms;
+  transition: filter 300ms;
   filter: invert(100%);
+  font-size: 2rem;
+}
+
+a::first-letter {
+  font-size: 4rem;
 }
 
 a:hover {

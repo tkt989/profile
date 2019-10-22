@@ -6,7 +6,6 @@
         :key="site.url"
         :title="site.title"
         :url="site.url"
-        :to="site.to"
       ></site>
     </div>
 
@@ -22,25 +21,13 @@ export default {
     return {
       sites: [
         {
-          title: "Profile",
-          to: "profile"
+          title: "Google Play",
+          url: "https://play.google.com/store/apps/developer?id=tkt989"
         },
         {
-          title: "Blog",
-          url: "https://blog.tkt989.info"
-        },
-        {
-          title: "Twitter",
-          url: "https://twitter.com/tkt989_dev"
-        },
-        {
-          title: "Github",
-          url: "https://github.com/tkt989"
-        },
-        {
-          title: "Products",
-          to: "products"
-        },
+          title: "App Store",
+          url: "https://apps.apple.com/jp/developer/takashi-tomoto/id1367155936"
+        }
       ]
     }
   },

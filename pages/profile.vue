@@ -1,15 +1,10 @@
 <template>
   <div class="container">
-    <div class="sites">
-      <site
-        v-for="site in sites"
-        :key="site.url"
-        :title="site.title"
-        :url="site.url"
-        :to="site.to"
-      ></site>
-    </div>
-
+    <main>
+      <p style="margin: 16px;">1992年生まれのプログラマです</p>
+      <p>使える言語：Java、Kotlin、Javascript、C#、PHP、Swift、Ruby、Python、Dart、Go</p>
+      <p>ライブラリ：RxJava、Android Room、Vue.js、Angular、Flutter</p>
+    </main>
     <footer>Powered by <a href="https://nuxtjs.org/">Nuxt.js</a></footer>
   </div>
 </template>
@@ -22,25 +17,13 @@ export default {
     return {
       sites: [
         {
-          title: "Profile",
-          to: "profile"
+          title: "Google Play",
+          url: "https://play.google.com/store/apps/developer?id=tkt989"
         },
         {
-          title: "Blog",
-          url: "https://blog.tkt989.info"
-        },
-        {
-          title: "Twitter",
-          url: "https://twitter.com/tkt989_dev"
-        },
-        {
-          title: "Github",
-          url: "https://github.com/tkt989"
-        },
-        {
-          title: "Products",
-          to: "products"
-        },
+          title: "App Store",
+          url: "https://apps.apple.com/jp/developer/takashi-tomoto/id1367155936"
+        }
       ]
     }
   },
@@ -61,10 +44,15 @@ export default {
   text-align: center;
 }
 
-.sites {
+main {
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main p {
+  margin: 4px;
 }
 
 footer {
